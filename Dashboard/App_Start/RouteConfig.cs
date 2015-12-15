@@ -18,6 +18,13 @@ namespace Dashboard
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Test",
+                url: "test/",
+                defaults: new { controller = "Test", action = "QueryTest" }
+            );
+
         }
     }
 }

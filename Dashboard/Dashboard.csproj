@@ -57,6 +57,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
       <Private>True</Private>
@@ -125,11 +129,6 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1292,8 +1291,11 @@
     <Content Include="Widgets\adf-widget-clock\registry\adf-widget-clock-02.png" />
     <Content Include="Widgets\adf-widget-clock\registry\adf-widget-clock.png" />
     <Content Include="Widgets\adf-widget-clock\sample\index.html" />
+    <Content Include="Widgets\adf-widget-sample\dist\adf-widget-sampleWidget.js" />
+    <Content Include="Widgets\adf-widget-sample\gulpfile.js" />
+    <Content Include="Widgets\adf-widget-sample\src\edit.html" />
+    <Content Include="Widgets\adf-widget-sample\src\view.html" />
     <Content Include="Widgets\adf-widget-version\.editorconfig" />
-    <Content Include="Widgets\adf-widget-version\.gitignore" />
     <Content Include="Widgets\adf-widget-version\bower.json" />
     <Content Include="Widgets\adf-widget-version\components\angular-bootstrap\ui-bootstrap-tpls.js" />
     <Content Include="Widgets\adf-widget-version\components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
@@ -1465,7 +1467,6 @@
     <Content Include="Widgets\adf-widget-version\components\Sortable\st\og-image.png" />
     <Content Include="Widgets\adf-widget-version\dist\adf-widget-version.js" />
     <Content Include="Widgets\adf-widget-version\dist\adf-widget-version.min.js" />
-    <Content Include="Widgets\adf-widget-version\gulpfile.js" />
     <Content Include="Widgets\adf-widget-version\README.md" />
     <Content Include="Widgets\adf-widget-version\registry\adf-widget-version-01.png" />
     <Content Include="Widgets\adf-widget-version\registry\adf-widget-version-02.png" />
@@ -1476,7 +1477,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Test\" />
     <Folder Include="Widgets\adf-widget-version\components\Sortable\meteor\example\packages\" />
   </ItemGroup>
   <ItemGroup>
@@ -1492,7 +1492,6 @@
     <Content Include="Widgets\adf-widget-clock\README.md" />
     <Content Include="Widgets\adf-widget-clock\registry\showcase.md" />
     <Content Include="Widgets\adf-widget-version\.bowerrc" />
-    <Content Include="Widgets\adf-widget-version\.git" />
     <Content Include="Widgets\adf-widget-version\.jshintrc" />
     <Content Include="Widgets\adf-widget-version\components\angular-bootstrap\.bower.json" />
     <Content Include="Widgets\adf-widget-version\components\angular-bootstrap\bower.json" />
@@ -1632,15 +1631,15 @@
     <Content Include="Widgets\adf-widget-version\components\Sortable\package.json" />
     <Content Include="Widgets\adf-widget-version\components\Sortable\README.md" />
     <Content Include="Widgets\adf-widget-version\package.json" />
+    <Content Include="Widgets\adf-widget-sample\.editorconfig" />
+    <Content Include="Widgets\adf-widget-sample\.jshintrc" />
+    <Content Include="Widgets\adf-widget-sample\package.json" />
+    <Content Include="Widgets\adf-widget-sample\README.md" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatabaseLibrary\DatabaseLibrary\DatabaseLibrary.csproj">
       <Project>{b388549c-5277-44c2-bce2-7506d79ab956}</Project>
       <Name>DatabaseLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.Controller\CSOM.STS.Controller.csproj">
-      <Project>{53b0fe62-bb76-499f-9138-0869742a6eaa}</Project>
-      <Name>CSOM.STS.Controller</Name>
     </ProjectReference>
     <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.DataAccess\CSOM.STS.DataAccess.csproj">
       <Project>{7ac594ba-f3d2-4771-8bae-49a708adb1c7}</Project>

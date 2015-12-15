@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard", "Dashboard\Dashboard.csproj", "{5026A82B-2580-4F9C-A574-399C3A550B67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLibrary", "DatabaseLibrary\DatabaseLibrary\DatabaseLibrary.csproj", "{B388549C-5277-44C2-BCE2-7506D79AB956}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOM.STS.Controller", "StudentTrackingSystem\CSOM.STS.Controller\CSOM.STS.Controller.csproj", "{53B0FE62-BB76-499F-9138-0869742A6EAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOM.STS.DataAccess", "StudentTrackingSystem\CSOM.STS.DataAccess\CSOM.STS.DataAccess.csproj", "{7AC594BA-F3D2-4771-8BAE-49A708ADB1C7}"
 EndProject
@@ -35,10 +33,6 @@ Global
 		{B388549C-5277-44C2-BCE2-7506D79AB956}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B388549C-5277-44C2-BCE2-7506D79AB956}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B388549C-5277-44C2-BCE2-7506D79AB956}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53B0FE62-BB76-499F-9138-0869742A6EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53B0FE62-BB76-499F-9138-0869742A6EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53B0FE62-BB76-499F-9138-0869742A6EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53B0FE62-BB76-499F-9138-0869742A6EAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7AC594BA-F3D2-4771-8BAE-49A708ADB1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7AC594BA-F3D2-4771-8BAE-49A708ADB1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AC594BA-F3D2-4771-8BAE-49A708ADB1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU

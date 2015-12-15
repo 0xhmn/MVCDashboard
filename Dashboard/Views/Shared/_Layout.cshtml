@@ -4,8 +4,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title</title>
-
 	<meta charset="UTF-8">
+	<base href="http://ultraviolet.csom.umn.edu/mvcdashboard/"></base>
 
 	<!-- styles -->
 	<link href="~/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,16 +29,18 @@
 	<script type="text/javascript" src="~/Widgets/adf-widget-clock/dist/adf-widget-clock.min.js"></script>
 	<!--version widget-->
 	<script type="text/javascript" src="~/Widgets/adf-widget-version/dist/adf-widget-version.min.js"></script>
+	<!--sample widget-->
+	<script type="text/javascript" src="~/Widgets/adf-widget-sample/dist/adf-widget-sampleWidget.js"></script>
+	
 
 
-
-	<!-- my scripts -->
+	<!-- angular scripts -->
 	<script src="~/Scripts/script.js"></script>
 	<script src="~/Scripts/MainController.js"></script>
 
 
 </head>
-<body class="container" ng-controller="sampleCtrl">
+<body class="container" ng-controller="mainController">
 	@RenderBody()
 </body>
 
