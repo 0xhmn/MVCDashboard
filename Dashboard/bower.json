@@ -1,0 +1,36 @@
+{
+  "name": "Dashboard",
+  "authors": [
+    "Hooman Yar <yar00001@umn.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "MVC",
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "adf-structures-base": "~0.1.0",
+    "angular-dashboard-framework": "~0.10.0",
+    "angular-ui-sortable": "0.13.0",
+    "adf-widget-clock": "~0.1.3",
+    "adf-widget-version": "~0.1.2"
+  },
+  "resolutions": {
+    "angular-bootstrap": "^0.13.3",
+    "angular": ">=1.2.x",
+    "bootstrap": "3.3.5",
+    "Sortable": "1.2.1",
+    "angular-dashboard-framework": "~0.10.0"
+  }
+}
