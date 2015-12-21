@@ -1,4 +1,6 @@
 Dashboard/Web.config
+# bower dependencies
+bower/
 
 .vs
 *Deployment/*.config

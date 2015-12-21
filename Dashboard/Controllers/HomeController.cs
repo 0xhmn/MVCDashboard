@@ -8,9 +8,6 @@ using CSOM.STS.DataAccess;
 
 namespace Dashboard.Controllers
 {
-
-    
-
     public class HomeController : Controller
     {
         protected readonly CSOMContext DbContext;

@@ -19,7 +19,7 @@
 			}
 		])
 		.controller('sampleController', [
-			"$http", "$scope", function ($http, $scope) {
+			"$http", "$scope", "commonDataService", function ($http, $scope, commonDataService) {
 
 				$scope.title = "Sample Query Widget";
 
@@ -42,6 +42,8 @@
 						console.log(res);
 					});
 				}
+
+				$scope.data2 = commonDataService.data;
 
 			}
 		]);

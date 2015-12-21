@@ -5,33 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title</title>
 	<meta charset="UTF-8">
-	<base href="http://ultraviolet.csom.umn.edu/mvcdashboard/"></base>
+	<base href="http://ultraviolet.csom.umn.edu/mvcdashboard/"/>
 
 	<!-- styles -->
-	<link href="~/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="~/bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.min.css" rel="stylesheet">
+	<link href="~/bower/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/bower/lib/angular-dashboard-framework/dist/angular-dashboard-framework.min.css" rel="stylesheet">
 
 	<!-- scripts -->
 
-	<script type="text/javascript" src="~/bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="~/bower_components/Sortable/Sortable.js"></script>
-	<script type="text/javascript" src="~/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-	<script type="text/javascript" src="~/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-	<script type="text/javascript" src="~/bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.js"></script>
+	<script type="text/javascript" src="~/bower/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="~/bower/lib/Sortable/Sortable.js"></script>
+	<script type="text/javascript" src="~/bower/lib/angular-bootstrap/ui-bootstrap.js"></script>
+	<script type="text/javascript" src="~/bower/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="~/bower/lib/angular-dashboard-framework/dist/angular-dashboard-framework.js"></script>
 
 	<!-- structure script-->
-	<script type="text/javascript" src="~/bower_components/adf-structures-base/dist/adf-structures-base.min.js"></script>
+	<script type="text/javascript" src="~/bower/lib/adf-structures-base/dist/adf-structures-base.min.js"></script>
 
 	<!--widgets-->
 	<!--clock widget-->
 	<link href="~/Widgets/adf-widget-clock/dist/adf-widget-clock.min.css" rel="stylesheet">
-	<script type="text/javascript" src="~/bower_components/moment/moment.js"></script>
+	<script type="text/javascript" src="~/bower/lib/moment/moment.js"></script>
 	<script type="text/javascript" src="~/Widgets/adf-widget-clock/dist/adf-widget-clock.min.js"></script>
 	<!--version widget-->
 	<script type="text/javascript" src="~/Widgets/adf-widget-version/dist/adf-widget-version.min.js"></script>
 	<!--sample widget-->
 	<script type="text/javascript" src="~/Widgets/adf-widget-sample/dist/adf-widget-sampleWidget.js"></script>
-	
+	<!--base widget-->
+	<script type="text/javascript" src="~/Widgets/adf-widget-base/dist/adf-widget-baseWidget.js"></script>
+
 
 
 	<!-- angular scripts -->
@@ -41,6 +43,7 @@
 
 </head>
 <body class="container" ng-controller="mainController">
+
 	@RenderBody()
 </body>
 
