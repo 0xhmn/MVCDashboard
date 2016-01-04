@@ -5,6 +5,6 @@
 
 .factory("commonDataService", function ($rootScope) {
 	var scope = $rootScope.$new(true);
-	scope.data = { text: "init text from factory" };
+	scope.data = { text: "default term" };
 	return scope;
 });

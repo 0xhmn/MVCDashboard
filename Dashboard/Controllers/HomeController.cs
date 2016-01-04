@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Dashboard.Models;
 using CSOM.STS.DataAccess;
 
@@ -17,6 +13,7 @@ namespace Dashboard.Controllers
             DbContext = new CSOMContext();
         }
 
+        [Route("")]
         public ActionResult Index()
         {
             var model = new TestClass();

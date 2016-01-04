@@ -9,7 +9,7 @@
 					.widget('baseWidget', {
 						title: 'Base Widget',
 						description: 'base widget for all the queries',
-						templateUrl: "Widgets/adf-widget-base/src/view.html",
+						templateUrl: "Widgets/adf-widget-base/src/view.cshtml",
 						controller: "baseWidgetController",
 						controllerAs: "baseWidCtrl",
 						edit: {
@@ -22,6 +22,18 @@
 			"$http", "$scope", "commonDataService", function ($http, $scope, commonDataService) {
 
 				$scope.data1 = commonDataService.data;
+
+				// getting the terms
+				var getReq = {
+					method: 'GET',
+					url: "http://ultraviolet.csom.umn.edu/mvcdashboard/programs",
+					headers: { 'Content-Type': 'application/json' }
+				}
+
+				$http(getReq).then(function (res) {
+					$scope.terms = res.data;
+
+				});
 
 			}
 		]);

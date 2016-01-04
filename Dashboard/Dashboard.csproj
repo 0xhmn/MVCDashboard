@@ -135,11 +135,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseProgramController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseProgramViewModel.cs" />
+    <Compile Include="Models\Queries\ProgramsQuery.cs" />
+    <Compile Include="Models\Queries\TermQuery.cs" />
+    <Compile Include="Models\TermModel.cs" />
     <Compile Include="Models\TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2436,7 +2441,7 @@
     <Content Include="Widgets\adf-widget-clock\sample\index.html" />
     <Content Include="Widgets\adf-widget-base\dist\adf-widget-baseWidget.js" />
     <Content Include="Widgets\adf-widget-base\src\edit.html" />
-    <Content Include="Widgets\adf-widget-base\src\view.html" />
+    <None Include="Widgets\adf-widget-base\src\view.cshtml" />
     <Content Include="Widgets\adf-widget-sample\dist\adf-widget-sampleWidget.js" />
     <Content Include="Widgets\adf-widget-sample\src\edit.html" />
     <Content Include="Widgets\adf-widget-sample\src\view.html" />

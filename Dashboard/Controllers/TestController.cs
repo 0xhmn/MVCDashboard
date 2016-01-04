@@ -18,6 +18,7 @@ namespace Dashboard.Controllers
 
 
         [HttpGet]
+        [Route("test")]
         public ActionResult QueryTest()
         {
             var model = new TestClass();
