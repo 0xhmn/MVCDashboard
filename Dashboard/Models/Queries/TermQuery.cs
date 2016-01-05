@@ -6,6 +6,9 @@ using CSOM.STS.DataAccess;
 
 namespace Dashboard.Models.Queries
 {
+    /// <summary>
+    /// selecting all the terms for each program
+    /// </summary>
     public class TermQuery
     {
         private readonly CSOMContext _dbContext;
@@ -15,10 +18,13 @@ namespace Dashboard.Models.Queries
             _dbContext = dbContext;
         }
 
-        //public IQueryable<TERM> GetProgramOpenTerms()
-        //{
-        //    _dbContext.
-        //} 
+        public IQueryable<TERM> GetProgramTerms(PROGRAM p)
+        {
+            return p.TERMS_APPLY_ACTIVE
+                .Select(t => t.TERM)
+                .OrderBy(t => t.TERM_ID)
+                .AsQueryable();
+        }
 
     }
 }

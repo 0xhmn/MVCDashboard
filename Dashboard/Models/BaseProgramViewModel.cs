@@ -10,16 +10,15 @@ namespace Dashboard.Models
 {
     public class BaseProgramViewModel
     {
-        List<TermModel> OpenTerms { get; set; } 
-        public string Test = "this is a test";
-        public IQueryable<int> Ids { get; set; } 
+        public int Id { get; set; }
+        public string Name { get; set; }
+        //public string ProgramInfo { get; set; } 
 
-        public BaseProgramViewModel(CSOMContext dbContext)
-        {
-            OpenTerms = new List<TermModel>();
-
-            //var pq = new ProgramsQuery(dbContext).GetPrograms().Select(p => p.PROGRAM_ID);
-        }
+        //public BaseProgramViewModel(CSOMContext dbContext, PROGRAM program)
+        //{
+        //    var programs = new ProgramsQuery(dbContext).GetPrograms();
+        //    programs.Select(p => )
+        //}
 
 
     }

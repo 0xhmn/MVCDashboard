@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using System.Web.Script.Serialization;
 using CSOM.STS.DataAccess;
-using CSOM.STS.DataAccess.Repositories;
 using Dashboard.Models;
 using Dashboard.Models.Queries;
 using Newtonsoft.Json;
@@ -16,7 +9,7 @@ using Newtonsoft.Json.Serialization;
 namespace Dashboard.Controllers
 {
     /// <summary>
-    /// Returning the temrs availabe to the rest of widgets
+    /// Returning the programs availabe to the rest of widgets
     /// </summary>
     public class BaseController : Controller
     {
@@ -31,9 +24,14 @@ namespace Dashboard.Controllers
         [Route("programs")]
         public ActionResult Program()
         {
-            var pq = new ProgramsQuery(_dbContext).GetPrograms().Select(p => p.PROGRAM_ID);
+            var programs = new ProgramsQuery(_dbContext).GetPrograms();
+            var result = programs.Select(p => new BaseProgramViewModel()
+            {
+                Id = p.PROGRAM_ID,
+                Name = p.PROGRAM1
+            });
 
-            var json = JsonConvert.SerializeObject(pq,
+            var json = JsonConvert.SerializeObject(result,
                 new JsonSerializerSettings()
                 {
                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
@@ -45,6 +43,28 @@ namespace Dashboard.Controllers
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     NullValueHandling = NullValueHandling.Include
                 });
+
+            return Content(json, "application/json");
+        }
+
+        [HttpGet]
+        [Route("terms")]
+        public ActionResult Term(int programId)
+        {
+            var result = _dbContext.TERMS_APPLY_ACTIVE.Where(p => p.PROGRAM_ID == programId).Select(t => t.TERM_ID);
+
+            var json = JsonConvert.SerializeObject(result,
+            new JsonSerializerSettings()
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                DefaultValueHandling = DefaultValueHandling.Include,
+                DateParseHandling = DateParseHandling.DateTime,
+                DateTimeZoneHandling = DateTimeZoneHandling.Unspecified,
+                StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                NullValueHandling = NullValueHandling.Include
+            });
 
             return Content(json, "application/json");
         }

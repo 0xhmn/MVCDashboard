@@ -2,16 +2,19 @@
 	<p>
 	</p>
 	<div ng-controller="baseWidgetController">
-		<h3>Current Term</h3>
+		<h3>Current Program</h3>
 		{{ data1.text }}
 		<hr><!--<input type="text" ng-model="data1.text"/>-->
 
-		<p>Select a Term to Start</p>
-		<select class="form-control" name="singleSelect" ng-model="data1.text">
+		<p>Select a Program to Start</p>
+		<select class="form-control" name="singleSelect" ng-model="data1.text" ng-change="generateTerms(data1.text)">
 			<!--<option value="option-1">Option 1</option>
 			<option value="option-2">Option 2</option>-->
-			<option ng-repeat="t in terms" value="{{t}}">{{t}}</option>
+			<option ng-repeat="p in programs" value="{{p.id}}">{{p.name}}</option>
 		</select><br>
+		{{programs}}
+		<hr/>
+		<p>collection of terms for this program:</p>
 		{{terms}}
 	</div>
 </div>

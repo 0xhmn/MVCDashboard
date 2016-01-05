@@ -24,17 +24,23 @@
 				$scope.data1 = commonDataService.data;
 
 				// getting the terms
-				var getReq = {
+				var getProgramReq = {
 					method: 'GET',
 					url: "http://ultraviolet.csom.umn.edu/mvcdashboard/programs",
 					headers: { 'Content-Type': 'application/json' }
 				}
 
-				$http(getReq).then(function (res) {
-					$scope.terms = res.data;
-
+				$http(getProgramReq).then(function (res) {
+					$scope.programs = res.data;
 				});
 
+				$scope.generateTerms = function (programId) {
+
+					var url = "http://ultraviolet.csom.umn.edu/mvcdashboard/terms?programId=" + programId;
+					$http.get(url).then(function (res) {
+						$scope.terms = res.data;
+					});
+				}
 			}
 		]);
 

@@ -17,10 +17,12 @@ namespace Dashboard.Models.Queries
 
         public IQueryable<PROGRAM> GetPrograms()
         {
+            // get all the programs
             return _dbContext.PROGRAMS
                 //.Include("TERMS_APPLY_ACTIVE")
                 //.Include("TERMS_APPLY_ACTIVE.TERM")
-                .Where(p => p.ONLINEAPP == true);
+                //.Where(p => p.ONLINEAPP == true)
+                .OrderBy(p => p.SORT_ORDER);
         }
 
 
