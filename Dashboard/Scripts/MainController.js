@@ -24,6 +24,12 @@
 					fullScreen: false,
 					type: "sampleWidget",
 					title: "Simple Query Widget"
+				},
+				{
+					modalSize: 'lg',
+					fullScreen: false,
+					type: "counterWidget",
+					title: "Counter Widget"
 				}]
 			}]
 		}]

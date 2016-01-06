@@ -196,6 +196,7 @@
     <Content Include="bower\lib\bootstrap\js\tooltip.js" />
     <Content Include="bower\lib\bootstrap\js\transition.js" />
     <Content Include="bower\lib\bootstrap\package.js" />
+    <Content Include="bower\lib\Chart\Chart.js" />
     <Content Include="bower\lib\jquery-ui\.gitignore" />
     <Content Include="bower\lib\jquery-ui\AUTHORS.txt" />
     <Content Include="bower\lib\jquery-ui\jquery-ui.js" />
@@ -2418,6 +2419,7 @@
     <Content Include="bower_components\Sortable\meteor\runtests.sh" />
     <Content Include="bower_components\Sortable\package.json" />
     <Content Include="bower_components\Sortable\README.md" />
+    <Content Include="Scripts\test.js" />
     <Content Include="Scripts\MainController.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />

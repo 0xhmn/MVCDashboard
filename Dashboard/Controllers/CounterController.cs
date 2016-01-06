@@ -25,14 +25,7 @@ namespace Dashboard.Controllers
         [HttpGet]
         public ActionResult ProgramApplications(int programId)
         {
-            //var result = new ProgramsQuery(_dbContext)
-            //    .GetProgramById(programId)
-            //    .Select(p => new { count = p.APPLICATIONS.Count()});
-            //var json = JsonConvert.SerializeObject(result,
-            //new JsonSerializerSettings());
-
             var programs = new ProgramsQuery(_dbContext).GetPrograms()
-                // .Select(p => p.APPLICATIONS.Count());
                 .Select(p => new ProgramCountModel()
                 {
                     Id = p.PROGRAM_ID,

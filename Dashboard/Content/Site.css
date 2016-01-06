@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* BootStrap Customization*/
+.bg-warning {
+    padding: 30px;
+}
