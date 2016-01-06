@@ -15,16 +15,19 @@ namespace Dashboard.Models.Queries
             _dbContext = dbconContext;
         }
 
+        // only programs that have a term
         public IQueryable<PROGRAM> GetPrograms()
         {
-            // get all the programs
             return _dbContext.PROGRAMS
-                //.Include("TERMS_APPLY_ACTIVE")
-                //.Include("TERMS_APPLY_ACTIVE.TERM")
-                //.Where(p => p.ONLINEAPP == true)
+                .Where(p => p.TERMS_APPLY_ACTIVE.Any())
                 .OrderBy(p => p.SORT_ORDER);
         }
 
+        public IQueryable<PROGRAM> GetProgramById(int programId)
+        {
+            return _dbContext.PROGRAMS
+                .Where(p => p.PROGRAM_ID == programId);
+        } 
 
     }
 }

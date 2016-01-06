@@ -3,11 +3,15 @@
 	</p>
 	<div ng-controller="baseWidgetController">
 		<h3>Current Program</h3>
-		{{ data1.text }}
+		<ul>
+			<li>current program id: {{ data1.program }}</li>
+			<li>current term id: {{ data1.term }}</li>
+		</ul>
+
 		<hr><!--<input type="text" ng-model="data1.text"/>-->
 
 		<p>Select a Program to Start</p>
-		<select class="form-control" name="singleSelect" ng-model="data1.text" ng-change="generateTerms(data1.text)">
+		<select class="form-control" name="programSelect" ng-model="data1.program" ng-change="generateTerms(data1.program)">
 			<!--<option value="option-1">Option 1</option>
 			<option value="option-2">Option 2</option>-->
 			<option ng-repeat="p in programs" value="{{p.id}}">{{p.name}}</option>
@@ -16,5 +20,13 @@
 		<hr/>
 		<p>collection of terms for this program:</p>
 		{{terms}}
+		<hr/>
+
+		<select class="form-control"
+				ng-disabled="terms[0].id < 0"
+		        ng-model="data1.term"
+				ng-options="t.id as t.name for t in terms">
+		</select><br>
+
 	</div>
 </div>

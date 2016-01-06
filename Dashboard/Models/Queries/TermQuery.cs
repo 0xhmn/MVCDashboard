@@ -18,13 +18,23 @@ namespace Dashboard.Models.Queries
             _dbContext = dbContext;
         }
 
-        public IQueryable<TERM> GetProgramTerms(PROGRAM p)
+        public IQueryable<TermModel> GetProgramTerms(int programId)
         {
-            return p.TERMS_APPLY_ACTIVE
-                .Select(t => t.TERM)
-                .OrderBy(t => t.TERM_ID)
-                .AsQueryable();
+            var result = _dbContext
+                .TERMS_APPLY_ACTIVE
+                // .Include("TERM")
+                .Where(t => t.PROGRAM_ID == programId)
+                .Select(t => new TermModel()
+                {
+                    Id = t.TERM_ID,
+                    Name = t.TERM.TERM1,
+                    StartDate = t.TERM.DATE_START,
+                    EndDate = t.TERM.DATE_END
+                });
+                // .Select(t => t.TERM_ID);
+            return result;
         }
+
 
     }
 }

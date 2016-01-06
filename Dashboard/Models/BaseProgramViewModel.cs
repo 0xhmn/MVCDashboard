@@ -22,4 +22,12 @@ namespace Dashboard.Models
 
 
     }
+
+    public class ProgramCountModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int NumberOfApplications { get; set; }
+        public bool? IsSelected { get; set; }
+    }
 }

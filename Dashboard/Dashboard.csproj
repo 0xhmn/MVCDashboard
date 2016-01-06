@@ -138,6 +138,7 @@
     <Compile Include="Controllers\BaseProgramController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\CounterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2442,6 +2443,9 @@
     <Content Include="Widgets\adf-widget-base\dist\adf-widget-baseWidget.js" />
     <Content Include="Widgets\adf-widget-base\src\edit.html" />
     <None Include="Widgets\adf-widget-base\src\view.cshtml" />
+    <Content Include="Widgets\adf-widget-counter\dist\adf-widget-counterWidget.js" />
+    <Content Include="Widgets\adf-widget-counter\src\edit.html" />
+    <Content Include="Widgets\adf-widget-counter\src\view.html" />
     <Content Include="Widgets\adf-widget-sample\dist\adf-widget-sampleWidget.js" />
     <Content Include="Widgets\adf-widget-sample\src\edit.html" />
     <Content Include="Widgets\adf-widget-sample\src\view.html" />
@@ -2624,9 +2628,13 @@
     <Content Include="Widgets\adf-widget-version\registry\showcase.md" />
     <Content Include="Widgets\adf-widget-version\sample\index.html" />
     <Content Include="Widgets\adf-widget-version\src\version.js" />
+    <Content Include="Widgets\adf-widget-counter\.editorconfig" />
+    <Content Include="Widgets\adf-widget-counter\.jshintrc" />
+    <Content Include="Widgets\adf-widget-counter\package.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\TotalCounter\" />
     <Folder Include="Widgets\adf-widget-version\components\Sortable\meteor\example\packages\" />
   </ItemGroup>
   <ItemGroup>

@@ -37,8 +37,6 @@ namespace Dashboard.Controllers
                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
                     DateFormatHandling = DateFormatHandling.IsoDateFormat,
                     DefaultValueHandling = DefaultValueHandling.Include,
-                    DateParseHandling = DateParseHandling.DateTime,
-                    DateTimeZoneHandling = DateTimeZoneHandling.Unspecified,
                     StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     NullValueHandling = NullValueHandling.Include
@@ -48,10 +46,10 @@ namespace Dashboard.Controllers
         }
 
         [HttpGet]
-        [Route("terms")]
+        [Route("terms/{programId:int}")]
         public ActionResult Term(int programId)
         {
-            var result = _dbContext.TERMS_APPLY_ACTIVE.Where(p => p.PROGRAM_ID == programId).Select(t => t.TERM_ID);
+            var result = new TermQuery(_dbContext).GetProgramTerms(programId);
 
             var json = JsonConvert.SerializeObject(result,
             new JsonSerializerSettings()

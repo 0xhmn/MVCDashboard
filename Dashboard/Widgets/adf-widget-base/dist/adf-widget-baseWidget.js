@@ -18,8 +18,8 @@
 					});
 			}
 		])
-		.controller('baseWidgetController', [
-			"$http", "$scope", "commonDataService", function ($http, $scope, commonDataService) {
+		.controller('baseWidgetController',
+			["$http", "$scope", "commonDataService", function($http, $scope, commonDataService) {
 
 				$scope.data1 = commonDataService.data;
 
@@ -30,15 +30,21 @@
 					headers: { 'Content-Type': 'application/json' }
 				}
 
-				$http(getProgramReq).then(function (res) {
+				$http(getProgramReq).then(function(res) {
 					$scope.programs = res.data;
 				});
 
-				$scope.generateTerms = function (programId) {
+				$scope.generateTerms = function(programId) {
 
-					var url = "http://ultraviolet.csom.umn.edu/mvcdashboard/terms?programId=" + programId;
-					$http.get(url).then(function (res) {
-						$scope.terms = res.data;
+					var url = "http://ultraviolet.csom.umn.edu/mvcdashboard/terms/" + programId;
+					$http.get(url).then(function(res) {
+						if (res.data.length === 0) {
+							$scope.terms = [{ id: -1, name: "Does not have a term" }];
+							$scope.termMsg = "bib";
+						} else {
+							$scope.termMsg = "select a term";
+							$scope.terms = res.data;
+						}
 					});
 				}
 			}

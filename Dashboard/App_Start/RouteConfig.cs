@@ -14,7 +14,6 @@ namespace Dashboard
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapMvcAttributeRoutes();
 
-
             //routes.MapRoute(
             //    name: "Test",
             //    url: "test/",
