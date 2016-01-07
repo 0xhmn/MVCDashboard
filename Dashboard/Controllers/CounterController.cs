@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using CSOM.STS.DataAccess;
-using Dashboard.Models;
 using Dashboard.Models.Queries;
+using Dashboard.Models.WidgetModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -20,13 +17,13 @@ namespace Dashboard.Controllers
             _dbContext = new CSOMContext();
         }
 
-        // count all the applications available for a certain program
-        [Route("counterApplication/{programId}")] //Route: /Users/12
+        // count all the applications for all the programs
+        [Route("counterApplication/{programId}")]
         [HttpGet]
         public ActionResult ProgramApplications(int programId)
         {
             var programs = new ProgramsQuery(_dbContext).GetPrograms()
-                .Select(p => new ProgramCountModel()
+                .Select(p => new CounterWidgetModel()
                 {
                     Id = p.PROGRAM_ID,
                     Name = p.PROGRAM1,

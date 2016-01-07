@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using CSOM.STS.DataAccess;
-using CSOM.STS.DataAccess.Repositories;
-using Dashboard.Models.Queries;
 
-namespace Dashboard.Models
+namespace Dashboard.Models.WidgetModels
 {
-    public class BaseProgramViewModel
+    public class CounterWidgetModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
+        public int NumberOfApplications { get; set; }
+        public bool? IsSelected { get; set; }
     }
 }

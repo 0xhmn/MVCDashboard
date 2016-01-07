@@ -21,12 +21,13 @@
 		.controller('baseWidgetController',
 			["$http", "$scope", "commonDataService", function($http, $scope, commonDataService) {
 
-				$scope.data1 = commonDataService.data;
+			  $scope.data1 = commonDataService.data;
+
 
 				// getting the terms
 				var getProgramReq = {
 					method: 'GET',
-					url: "http://ultraviolet.csom.umn.edu/mvcdashboard/programs",
+					url: "programs/",
 					headers: { 'Content-Type': 'application/json' }
 				}
 
@@ -35,8 +36,7 @@
 				});
 
 				$scope.generateTerms = function(programId) {
-
-					var url = "http://ultraviolet.csom.umn.edu/mvcdashboard/terms/" + programId;
+					var url = "terms/" + programId;
 					$http.get(url).then(function(res) {
 						if (res.data.length === 0) {
 							$scope.terms = [{ id: -1, name: "Does not have a term" }];

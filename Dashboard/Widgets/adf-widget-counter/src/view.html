@@ -1,14 +1,21 @@
-﻿<div>
+﻿<div ng-show="programSelected">
+	<h3>Programs Status</h3>
+	<div id="chart_div"></div>
+</div>
+<div class="bg-warning" ng-show="!programSelected">
+	To use this widget, you need to select a program first.
+</div>
+<hr />
+<div>
 	<p>CURRENT STATUS</p>
 	<p>Current Program ID !!! {{data2.program}}</p>
 	<p>Number of applications:</p>
 	{{numberOfApplications | json}}
 </div>
-<hr/>
-<div class="bg-warning"  ng-show="!programSelected">
-	To use this widget, you need to select a program first.
-</div>
-<div ng-show="programSelected">
+
+<!-- Chartist Chart - Disabled for now -->
+<div ng-show="false">
 	<h3>Chartist Test Test</h3>
 	<div class="ct-chart ct-perfect-fourth"></div>
 </div>
+

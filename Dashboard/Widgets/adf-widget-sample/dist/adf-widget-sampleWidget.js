@@ -25,7 +25,7 @@
 
 				var getReq = {
 					method: 'GET',
-					url: "http://ultraviolet.csom.umn.edu/mvcdashboard/test",
+					url: "test/",
 					headers: { 'Content-Type': 'application/json' }
 				}
 

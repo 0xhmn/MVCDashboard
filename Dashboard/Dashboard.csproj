@@ -147,6 +147,7 @@
     <Compile Include="Models\Queries\TermQuery.cs" />
     <Compile Include="Models\TermModel.cs" />
     <Compile Include="Models\TestClass.cs" />
+    <Compile Include="Models\WidgetModels\CounterWidgetModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,7 +197,11 @@
     <Content Include="bower\lib\bootstrap\js\tooltip.js" />
     <Content Include="bower\lib\bootstrap\js\transition.js" />
     <Content Include="bower\lib\bootstrap\package.js" />
+    <Content Include="bower\lib\chartist\dist\chartist.js" />
+    <Content Include="bower\lib\chartist\dist\chartist.min.css" />
+    <Content Include="bower\lib\chartist\dist\chartist.min.js" />
     <Content Include="bower\lib\Chart\Chart.js" />
+    <Content Include="bower\lib\Chart\chartist.js" />
     <Content Include="bower\lib\jquery-ui\.gitignore" />
     <Content Include="bower\lib\jquery-ui\AUTHORS.txt" />
     <Content Include="bower\lib\jquery-ui\jquery-ui.js" />
@@ -2419,7 +2424,6 @@
     <Content Include="bower_components\Sortable\meteor\runtests.sh" />
     <Content Include="bower_components\Sortable\package.json" />
     <Content Include="bower_components\Sortable\README.md" />
-    <Content Include="Scripts\test.js" />
     <Content Include="Scripts\MainController.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
@@ -2444,6 +2448,17 @@
     <Content Include="Widgets\adf-widget-clock\sample\index.html" />
     <Content Include="Widgets\adf-widget-base\dist\adf-widget-baseWidget.js" />
     <Content Include="Widgets\adf-widget-base\src\edit.html" />
+    <Content Include="bower\lib\chartist\.bower.json" />
+    <Content Include="bower\lib\chartist\bower.json" />
+    <Content Include="bower\lib\chartist\CHANGELOG.md" />
+    <Content Include="bower\lib\chartist\CODINGSTYLE.md" />
+    <Content Include="bower\lib\chartist\CONTRIBUTING.md" />
+    <Content Include="bower\lib\chartist\dist\chartist.min.js.map" />
+    <Content Include="bower\lib\chartist\dist\LICENSE" />
+    <Content Include="bower\lib\chartist\dist\scss\chartist.scss" />
+    <Content Include="bower\lib\chartist\dist\scss\settings\_chartist-settings.scss" />
+    <Content Include="bower\lib\chartist\LICENSE" />
+    <Content Include="bower\lib\chartist\README.md" />
     <None Include="Widgets\adf-widget-base\src\view.cshtml" />
     <Content Include="Widgets\adf-widget-counter\dist\adf-widget-counterWidget.js" />
     <Content Include="Widgets\adf-widget-counter\src\edit.html" />
@@ -2623,7 +2638,6 @@
     <Content Include="Widgets\adf-widget-version\components\Sortable\st\og-image.png" />
     <Content Include="Widgets\adf-widget-version\dist\adf-widget-version.js" />
     <Content Include="Widgets\adf-widget-version\dist\adf-widget-version.min.js" />
-    <Content Include="Widgets\adf-widget-version\README.md" />
     <Content Include="Widgets\adf-widget-version\registry\adf-widget-version-01.png" />
     <Content Include="Widgets\adf-widget-version\registry\adf-widget-version-02.png" />
     <Content Include="Widgets\adf-widget-version\registry\adf-widget-version.png" />
@@ -2632,7 +2646,6 @@
     <Content Include="Widgets\adf-widget-version\src\version.js" />
     <Content Include="Widgets\adf-widget-counter\.editorconfig" />
     <Content Include="Widgets\adf-widget-counter\.jshintrc" />
-    <Content Include="Widgets\adf-widget-counter\package.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2813,7 +2826,6 @@
     <Content Include="Widgets\adf-widget-clock\.bower.json" />
     <Content Include="Widgets\adf-widget-clock\.editorconfig" />
     <Content Include="Widgets\adf-widget-clock\bower.json" />
-    <Content Include="Widgets\adf-widget-clock\README.md" />
     <Content Include="Widgets\adf-widget-clock\registry\showcase.md" />
     <Content Include="Widgets\adf-widget-version\.bowerrc" />
     <Content Include="Widgets\adf-widget-version\.jshintrc" />
