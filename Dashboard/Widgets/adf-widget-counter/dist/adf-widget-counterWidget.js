@@ -77,16 +77,16 @@
 						legend: { position: 'right', textStyle: { color: 'gray', fontSize: 12 } },
 						chartArea: { left: 20, top: 20, width: '100%', height: '100%' }
 					};
-					// Instantiate and draw our chart, passing in some options.
+					//// Instantiate and draw our chart, passing in some options.
 					var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 					chart.draw(data, options);
 				}
 
 
 
-				// watch program for any change
-				$scope.$watch('data2.program', function () {
-					if ($scope.data2.program == "default") {
+				//// watch program for any change
+				$scope.$watch('data2.programId', function () {
+					if ($scope.data2.programId === -1) {
 						$scope.programSelected = false;
 					} else {
 						$scope.programSelected = true;
@@ -94,10 +94,10 @@
 						$http.get(url).then(function (res) {
 
 							$scope.numberOfApplications = res.data;
-							console.table(makeDistinctArray(res.data));
-							console.log(makeGoogleChartArray(res.data));
+							// console.log(makeDistinctArray(res.data));
+							// console.log(makeGoogleChartArray(res.data));
 
-							// draw the fist chart
+							//// draw the fist chart
 							var responseArray = makeDistinctArray(res.data);
 							drawChartOne(responseArray);
 

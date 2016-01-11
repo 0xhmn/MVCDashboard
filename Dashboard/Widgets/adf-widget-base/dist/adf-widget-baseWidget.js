@@ -40,9 +40,7 @@
 					$http.get(url).then(function(res) {
 						if (res.data.length === 0) {
 							$scope.terms = [{ id: -1, name: "Does not have a term" }];
-							$scope.termMsg = "bib";
 						} else {
-							$scope.termMsg = "select a term";
 							$scope.terms = res.data;
 						}
 					});

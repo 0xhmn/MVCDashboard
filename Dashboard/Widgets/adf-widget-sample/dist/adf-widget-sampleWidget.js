@@ -39,7 +39,7 @@
 				$scope.sendGetReq = function() {
 					$http(getReq).then(function (res) {
 						console.log("getting the response:");
-						console.table(res);
+						console.log(res);
 					});
 				}
 
