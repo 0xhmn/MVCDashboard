@@ -1,9 +1,9 @@
 ﻿angular.module('sample', [
         'adf', 'adf.structures.base', 'adf.widget.clock'
 		, 'controller-01'
-		, 'adf.widget.sampleWidget'
 		, 'adf.widget.baseWidget'
 		, 'adf.widget.counterWidget'
+    , 'adf.widget.timelineWidget'
 ])
 
 .factory("commonDataService", function ($rootScope) {

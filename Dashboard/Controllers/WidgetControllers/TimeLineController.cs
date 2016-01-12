@@ -6,21 +6,21 @@ using Dashboard.Util;
 
 namespace Dashboard.Controllers.WidgetControllers
 {
-    public class CounterController : Controller
+    public class TimeLineController : Controller
     {
         private readonly CSOMContext _dbContext;
 
-        public CounterController()
+        public TimeLineController()
         {
             _dbContext = new CSOMContext();
         }
 
-        [Route("counterApplication/{programId}")]
         [HttpGet]
-        public async Task<ActionResult> ProgramApplications(int programId)
+        [Route("timeline/{programId:int}")]
+        public async Task<ActionResult> TimeLine(int programId)
         {
-            var programs = new CounterModel().GetPrograms(_dbContext, programId);
-            var json = await JsonUtil.JsonResultAsync(programs);
+            var result = new TimeLineModel().GetTerms(_dbContext, programId);
+            var json = await JsonUtil.JsonResultAsync(result);
             return Content(json, "application/json");
         }
     }

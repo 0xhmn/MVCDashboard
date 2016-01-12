@@ -1,16 +1,21 @@
-﻿<div ng-show="programSelected">
-	<h3>Programs Status</h3>
+﻿<h3>Programs Status</h3>
+<table class="table table-bordered">
+  <tr>
+    <th>Program Id</th>
+    <th>Program Name</th>
+    <th>Number of Applications</th>
+  </tr>
+  <tr ng-repeat="p in programData">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.numberOfApplications}}</td>
+  </tr>
+</table>
+
+<hr/>
+
+<div ng-show="true">
 	<div id="chart_div"></div>
-</div>
-<div class="bg-warning" ng-show="!programSelected">
-	To use this widget, you need to select a program first.
-</div>
-<hr />
-<div>
-	<p>CURRENT STATUS</p>
-	<p>Current Program ID !!! {{data2.program}}</p>
-	<p>Number of applications:</p>
-	{{numberOfApplications | json}}
 </div>
 
 <!-- Chartist Chart - Disabled for now -->

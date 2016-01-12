@@ -11,7 +11,8 @@
 		{
 			columns: [{
 				styleClass: "col-md-6",
-				widgets: [{
+				widgets: [
+        {
 					modalSize: 'lg',
 					fullScreen: false,
 					type: "baseWidget",
@@ -19,12 +20,16 @@
 				}]
 			}, {
 				styleClass: "col-md-6",
-				widgets: [{
-					modalSize: 'lg',
-					fullScreen: false,
-					type: "sampleWidget",
-					title: "Simple Query Widget"
-				},
+				widgets: [
+        {
+          type: "timelineWidget",
+          title: "TimeLine Widget"
+        }
+          ,
+        {
+          type: "counterWidget",
+          title: "Counter Widget"
+				}
 				//{
 				//	modalSize: 'lg',
 				//	fullScreen: false,

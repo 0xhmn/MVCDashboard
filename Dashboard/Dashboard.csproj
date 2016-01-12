@@ -144,6 +144,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WidgetControllers\CounterController.cs" />
+    <Compile Include="Controllers\WidgetControllers\TimeLineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,7 +153,8 @@
     <Compile Include="Models\Intefaces\IProgramGetter.cs" />
     <Compile Include="Models\Intefaces\ITermGetter.cs" />
     <Compile Include="Models\TestClass.cs" />
-    <Compile Include="Models\WidgetModels\CounterWidgetModel.cs" />
+    <Compile Include="Models\WidgetModels\CounterModel.cs" />
+    <Compile Include="Models\WidgetModels\TimeLineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\JsonUtil.cs" />
   </ItemGroup>
@@ -1348,14 +1350,16 @@
     <Content Include="bower\lib\chartist\README.md" />
     <Content Include="ClassDiagram1.cd" />
     <None Include="Widgets\adf-widget-base\src\view.cshtml" />
+    <Content Include="Widgets\adf-widget-timeline\dist\adf-widget-timelineWidget.js" />
+    <Content Include="Widgets\adf-widget-timeline\src\edit.html" />
+    <Content Include="Widgets\adf-widget-timeline\src\view.html" />
     <Content Include="Widgets\adf-widget-counter\dist\adf-widget-counterWidget.js" />
     <Content Include="Widgets\adf-widget-counter\src\edit.html" />
     <Content Include="Widgets\adf-widget-counter\src\view.html" />
-    <Content Include="Widgets\adf-widget-sample\dist\adf-widget-sampleWidget.js" />
-    <Content Include="Widgets\adf-widget-sample\src\edit.html" />
-    <Content Include="Widgets\adf-widget-sample\src\view.html" />
     <Content Include="Widgets\adf-widget-counter\.editorconfig" />
     <Content Include="Widgets\adf-widget-counter\.jshintrc" />
+    <Content Include="Widgets\adf-widget-timeline\.editorconfig" />
+    <Content Include="Widgets\adf-widget-timeline\.jshintrc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1535,9 +1539,6 @@
     <Content Include="Widgets\adf-widget-clock\.editorconfig" />
     <Content Include="Widgets\adf-widget-clock\bower.json" />
     <Content Include="Widgets\adf-widget-clock\registry\showcase.md" />
-    <Content Include="Widgets\adf-widget-sample\.editorconfig" />
-    <Content Include="Widgets\adf-widget-sample\.jshintrc" />
-    <Content Include="Widgets\adf-widget-sample\package.json" />
     <Content Include="Widgets\adf-widget-base\.editorconfig" />
     <Content Include="Widgets\adf-widget-base\.jshintrc" />
     <Content Include="Widgets\adf-widget-base\package.json" />

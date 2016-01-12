@@ -9,6 +9,6 @@ namespace Dashboard.Models.Intefaces
 {
     interface ITermGetter<out T>
     {
-        IQueryable<T> GetTerms(CSOMContext dbContext, int? termId);
+        IQueryable<T> GetTerms(CSOMContext dbContext, int? programId);
     }
 }

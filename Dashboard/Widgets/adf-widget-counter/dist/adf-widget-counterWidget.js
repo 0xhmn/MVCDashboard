@@ -85,17 +85,13 @@
 
 
 				//// watch program for any change
-				$scope.$watch('data2.programId', function () {
-					if ($scope.data2.programId === -1) {
-						$scope.programSelected = false;
-					} else {
+				var initChart = function () {
+
 						$scope.programSelected = true;
 						var url = "counterApplication/" + $scope.data2.programId;
 						$http.get(url).then(function (res) {
 
-							$scope.numberOfApplications = res.data;
-							// console.log(makeDistinctArray(res.data));
-							// console.log(makeGoogleChartArray(res.data));
+							$scope.programData = res.data;
 
 							//// draw the fist chart
 							var responseArray = makeDistinctArray(res.data);
@@ -103,13 +99,10 @@
 
 							drawChart(makeGoogleChartArray(res.data));
 						});
-					}
-				}, true);
 
-
-
-
-			}
+				};
+	      initChart();
+	    }
 		]);
 
 //angular.module("adf.widget.sampleWidget").run(["$templateCache", function ($templateCache) {

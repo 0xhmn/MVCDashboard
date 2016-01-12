@@ -9,11 +9,11 @@ namespace Dashboard.Models
         public string Id { get; set; }
         public string Name { get; set; }
 
-        public IQueryable<BaseTermVeiwModel> GetTerms(CSOMContext dbContext, int? termId)
+        public IQueryable<BaseTermVeiwModel> GetTerms(CSOMContext dbContext, int? programId)
         {
             var result = dbContext
                 .TERMS_APPLY_ACTIVE
-                .Where(t => t.PROGRAM_ID == termId)
+                .Where(t => t.PROGRAM_ID == programId)
                 .Select(t => new BaseTermVeiwModel()
                 {
                     Id = t.TERM_ID,

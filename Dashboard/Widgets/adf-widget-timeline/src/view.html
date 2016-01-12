@@ -1,0 +1,25 @@
+﻿<div class="bg-warning" ng-show="!programSelected">
+  To use this widget, you need to select a program first.
+</div>
+
+<div ng-show="programSelected">
+  <table class="table table-bordered">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+    <tr ng-repeat="t in terms">
+      <td>{{t.id}}</td>
+      <td>{{t.name}}</td>
+      <td>{{standardDateMaker(t.startDate)}}</td>
+      <td>{{standardDateMaker(t.endDate)}}</td>
+    </tr>
+  </table>
+
+  <hr />
+
+  <div id="timeline" ng-style="chartStyle"></div>
+
+</div>

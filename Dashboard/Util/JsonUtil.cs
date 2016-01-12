@@ -18,9 +18,11 @@ namespace Dashboard.Util
                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
                     DateFormatHandling = DateFormatHandling.IsoDateFormat,
                     DefaultValueHandling = DefaultValueHandling.Include,
+                    DateParseHandling = DateParseHandling.DateTime,
+                    DateTimeZoneHandling = DateTimeZoneHandling.Unspecified,
                     StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                    NullValueHandling = NullValueHandling.Include
+                    NullValueHandling = NullValueHandling.Include,
                 })
                 );
             return jsonREsult;
