@@ -1349,6 +1349,23 @@
     <Content Include="bower\lib\chartist\LICENSE" />
     <Content Include="bower\lib\chartist\README.md" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Widgets\adf-widget-usmap\.bowerrc" />
+    <Content Include="Widgets\adf-widget-usmap\.DS_Store" />
+    <Content Include="Widgets\adf-widget-usmap\.editorconfig" />
+    <Content Include="Widgets\adf-widget-usmap\.gitignore" />
+    <Content Include="Widgets\adf-widget-usmap\.jshintrc" />
+    <Content Include="Widgets\adf-widget-usmap\.tmp\dist\index.html" />
+    <Content Include="Widgets\adf-widget-usmap\.tmp\dist\templates.tpl.js" />
+    <Content Include="Widgets\adf-widget-usmap\bower.json" />
+    <Content Include="Widgets\adf-widget-usmap\dist\adf-widget-US-Map.js" />
+    <Content Include="Widgets\adf-widget-usmap\dist\adf-widget-US-Map.min.js" />
+    <Content Include="Widgets\adf-widget-usmap\gulpfile.js" />
+    <Content Include="Widgets\adf-widget-usmap\package.json" />
+    <Content Include="Widgets\adf-widget-usmap\README.md" />
+    <Content Include="Widgets\adf-widget-usmap\sample\index.html" />
+    <Content Include="Widgets\adf-widget-usmap\src\edit.html" />
+    <Content Include="Widgets\adf-widget-usmap\src\US-Map.js" />
+    <Content Include="Widgets\adf-widget-usmap\src\view.html" />
     <None Include="Widgets\adf-widget-base\src\view.cshtml" />
     <Content Include="Widgets\adf-widget-timeline\dist\adf-widget-timelineWidget.js" />
     <Content Include="Widgets\adf-widget-timeline\src\edit.html" />
@@ -1599,6 +1616,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties bower_1json__JSONSchema="http://json.schemastore.org/coffeelint" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

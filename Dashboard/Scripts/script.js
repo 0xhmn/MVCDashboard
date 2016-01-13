@@ -4,6 +4,7 @@
 		, 'adf.widget.baseWidget'
 		, 'adf.widget.counterWidget'
     , 'adf.widget.timelineWidget'
+    , 'adf.widget.US-Map'
 ])
 
 .factory("commonDataService", function ($rootScope) {
