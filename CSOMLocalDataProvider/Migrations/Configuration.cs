@@ -1,18 +1,18 @@
-namespace CSOMDataProvider.Migrations
+namespace CSOMLocalDataProvider.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CSOMDataProvider.CSOMContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CSOMLocalDataProvider.CSOMContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CSOMDataProvider.CSOMContext context)
+        protected override void Seed(CSOMLocalDataProvider.CSOMContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CSOMDataGenerator")]
+[assembly: AssemblyTitle("CSOMLocalDataGenerator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSOMDataGenerator")]
+[assembly: AssemblyProduct("CSOMLocalDataGenerator")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0de5a789-edab-40e2-9bef-7fbe1eb1a494")]
+[assembly: Guid("bef15253-900e-4a48-b2d3-44c1fd0c434a")]
 
 // Version information for an assembly consists of the following four values:
 //
