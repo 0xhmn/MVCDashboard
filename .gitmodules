@@ -1,9 +1,0 @@
-[submodule "UtilityClassLibrary"]
-	path = UtilityClassLibrary
-	url = git@github.umn.edu:Carlson-IT/UtilityClassLibrary.git
-[submodule "StudentTrackingSystem"]
-	path = StudentTrackingSystem
-	url = git@github.umn.edu:Carlson-IT/StudentTrackingSystem.git
-[submodule "DatabaseLibrary"]
-	path = DatabaseLibrary
-	url = git@github.umn.edu:Carlson-IT/DatabaseLibrary.git

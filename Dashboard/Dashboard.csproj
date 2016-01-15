@@ -1560,36 +1560,6 @@
     <Content Include="Widgets\adf-widget-base\.jshintrc" />
     <Content Include="Widgets\adf-widget-base\package.json" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DatabaseLibrary\DatabaseLibrary\DatabaseLibrary.csproj">
-      <Project>{b388549c-5277-44c2-bce2-7506d79ab956}</Project>
-      <Name>DatabaseLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.DataAccess\CSOM.STS.DataAccess.csproj">
-      <Project>{7ac594ba-f3d2-4771-8bae-49a708adb1c7}</Project>
-      <Name>CSOM.STS.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.DomainObjects\CSOM.STS.DomainObjects.csproj">
-      <Project>{ee505722-d02d-4666-ae41-81dd08290d30}</Project>
-      <Name>CSOM.STS.DomainObjects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.Enumerator\CSOM.STS.Enumerators.csproj">
-      <Project>{a4289b91-6794-4339-b60d-ea7addc02ba0}</Project>
-      <Name>CSOM.STS.Enumerators</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.Identity\CSOM.STS.Identity.csproj">
-      <Project>{046850cd-c637-4522-b264-7ef4081c93a4}</Project>
-      <Name>CSOM.STS.Identity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentTrackingSystem\CSOM.STS.Interfaces\CSOM.STS.Interfaces.csproj">
-      <Project>{b0cdf129-c266-4e79-9d59-40532fb92d59}</Project>
-      <Name>CSOM.STS.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UtilityClassLibrary\UtilityClassLibrary\UtilityClassLibrary.csproj">
-      <Project>{eb7f067a-9f46-447d-a409-31ccf5795526}</Project>
-      <Name>UtilityClassLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
