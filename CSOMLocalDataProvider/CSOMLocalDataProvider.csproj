@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1423708B-BC8E-46FE-B6B8-7D4A637E4490}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSOMLocalDataProvider</RootNamespace>
     <AssemblyName>CSOMLocalDataProvider</AssemblyName>
@@ -68,13 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CSOMContext.cs" />
-    <Compile Include="Migrations\201601142047353_TestM.cs" />
-    <Compile Include="Migrations\201601142047353_TestM.Designer.cs">
-      <DependentUpon>201601142047353_TestM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201601142117387_RemvoedTest.cs" />
-    <Compile Include="Migrations\201601142117387_RemvoedTest.Designer.cs">
-      <DependentUpon>201601142117387_RemvoedTest.cs</DependentUpon>
+    <Compile Include="Generator.cs" />
+    <Compile Include="Migrations\201601152129525_seedMigration.cs" />
+    <Compile Include="Migrations\201601152129525_seedMigration.Designer.cs">
+      <DependentUpon>201601152129525_seedMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,24 +90,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601142047353_TestM.resx">
-      <DependentUpon>201601142047353_TestM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601142117387_RemvoedTest.resx">
-      <DependentUpon>201601142117387_RemvoedTest.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601152129525_seedMigration.resx">
+      <DependentUpon>201601152129525_seedMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

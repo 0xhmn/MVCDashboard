@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityClassLibrary", "Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOMLocalDataProvider", "CSOMLocalDataProvider\CSOMLocalDataProvider.csproj", "{1423708B-BC8E-46FE-B6B8-7D4A637E4490}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOMLocalDataGenerator", "CSOMLocalDataGenerator\CSOMLocalDataGenerator.csproj", "{BEF15253-900E-4A48-B2D3-44C1FD0C434A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,10 +63,6 @@ Global
 		{1423708B-BC8E-46FE-B6B8-7D4A637E4490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1423708B-BC8E-46FE-B6B8-7D4A637E4490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1423708B-BC8E-46FE-B6B8-7D4A637E4490}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEF15253-900E-4A48-B2D3-44C1FD0C434A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEF15253-900E-4A48-B2D3-44C1FD0C434A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEF15253-900E-4A48-B2D3-44C1FD0C434A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEF15253-900E-4A48-B2D3-44C1FD0C434A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

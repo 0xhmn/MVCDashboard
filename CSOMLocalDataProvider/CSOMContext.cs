@@ -1,4 +1,7 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.IO;
+using System.Reflection;
 using CSOMLocalDataProvider;
 
 namespace CSOMLocalDataProvider

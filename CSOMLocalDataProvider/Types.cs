@@ -10,22 +10,23 @@ namespace CSOMLocalDataProvider
 {
     public class Program
     {
-        public int Id { get; set; }
+        public virtual int ProgramId { get; set; }
         public string ProgramTitle { get; set; }
         public string ProgramDescription { get; set; }
-        public ICollection<Term> Terms { get; set; } 
+        public virtual ICollection<Term> Terms { get; set; } 
     }
 
     public class Term
     {
-        [Column(Order = 0), Key]
         public int Id { get; set; }
+        public int TermIdNumber { get; set; }
         public string TermTitle { get; set; }
         public DateTime? DateStart { get; set; }
         public DateTime? DateEnd { get; set; }
-        public Program Program { get; set; } 
-        [Column(Order = 1), Key, ForeignKey("Program")]
-        public int ProgramId { get; set; }
+
+        [ForeignKey("Program"), Required]
+        public int ProgramId { get; set; }              // foreign key
+        public virtual Program Program { get; set; } 
     }
 
 }

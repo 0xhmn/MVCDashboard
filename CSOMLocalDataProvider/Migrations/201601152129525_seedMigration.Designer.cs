@@ -7,13 +7,13 @@ namespace CSOMLocalDataProvider.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class RemvoedTest : IMigrationMetadata
+    public sealed partial class seedMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RemvoedTest));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seedMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201601142117387_RemvoedTest"; }
+            get { return "201601152129525_seedMigration"; }
         }
         
         string IMigrationMetadata.Source
