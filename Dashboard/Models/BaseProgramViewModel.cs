@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using CSOM.STS.DataAccess;
+using CSOMLocalDataProvider;
 using Dashboard.Models.Intefaces;
 
 namespace Dashboard.Models
@@ -11,13 +11,11 @@ namespace Dashboard.Models
 
         public IQueryable<BaseProgramViewModel> GetPrograms(CSOMContext dbContext, int? programId)
         {
-            return dbContext.PROGRAMS
-                .Where(p => p.TERMS_APPLY_ACTIVE.Any())
-                .OrderBy(p => p.SORT_ORDER)
+            return dbContext.Programs
                 .Select(p => new BaseProgramViewModel()
                 {
-                    Id = p.PROGRAM_ID,
-                    Name = p.PROGRAM1
+                    Id = p.ProgramId,
+                    Name = p.ProgramTitle
                 });
         }
     }

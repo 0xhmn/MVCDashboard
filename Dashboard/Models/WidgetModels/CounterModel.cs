@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using CSOM.STS.DataAccess;
+using CSOMLocalDataProvider;
 using Dashboard.Models.Intefaces;
 
 namespace Dashboard.Models.WidgetModels
@@ -14,15 +14,13 @@ namespace Dashboard.Models.WidgetModels
 
         public IQueryable<CounterModel> GetPrograms(CSOMContext dbContext, int? programId)
         {
-            var programs = dbContext.PROGRAMS
-                .Where(p => p.TERMS_APPLY_ACTIVE.Any())
-                .OrderBy(p => p.SORT_ORDER)
+            var programs = dbContext.Programs
                 .Select(p => new CounterModel()
                 {
-                    Id = p.PROGRAM_ID,
-                    Name = p.PROGRAM1,
-                    NumberOfApplications = p.APPLICATIONS.Count(),
-                    IsSelected = (p.PROGRAM_ID == programId)
+                    Id = p.ProgramId,
+                    Name = p.ProgramTitle,
+                    NumberOfApplications = 10,    // ToDo: make a column for number of the appliations
+                    IsSelected = (p.ProgramId == programId)
                 });
             Console.WriteLine(programs);
             return programs;

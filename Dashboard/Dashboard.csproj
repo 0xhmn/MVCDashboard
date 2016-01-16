@@ -52,6 +52,34 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -142,7 +170,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseDashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WidgetControllers\CounterController.cs" />
     <Compile Include="Controllers\WidgetControllers\TimeLineController.cs" />
     <Compile Include="Global.asax.cs">
@@ -152,7 +179,6 @@
     <Compile Include="Models\BaseTermVeiwModel.cs" />
     <Compile Include="Models\Intefaces\IProgramGetter.cs" />
     <Compile Include="Models\Intefaces\ITermGetter.cs" />
-    <Compile Include="Models\TestClass.cs" />
     <Compile Include="Models\WidgetModels\CounterModel.cs" />
     <Compile Include="Models\WidgetModels\TimeLineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1366,6 +1392,7 @@
     <Content Include="Widgets\adf-widget-usmap\src\edit.html" />
     <Content Include="Widgets\adf-widget-usmap\src\US-Map.js" />
     <Content Include="Widgets\adf-widget-usmap\src\view.html" />
+    <Content Include="ApplicationInsights.config" />
     <None Include="Widgets\adf-widget-base\src\view.cshtml" />
     <Content Include="Widgets\adf-widget-timeline\dist\adf-widget-timelineWidget.js" />
     <Content Include="Widgets\adf-widget-timeline\src\edit.html" />
@@ -1559,6 +1586,12 @@
     <Content Include="Widgets\adf-widget-base\.editorconfig" />
     <Content Include="Widgets\adf-widget-base\.jshintrc" />
     <Content Include="Widgets\adf-widget-base\package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSOMLocalDataProvider\CSOMLocalDataProvider.csproj">
+      <Project>{1423708b-bc8e-46fe-b6b8-7d4a637e4490}</Project>
+      <Name>CSOMLocalDataProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

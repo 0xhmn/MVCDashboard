@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
+using CSOMLocalDataProvider;
 using Dashboard.Models;
-using CSOM.STS.DataAccess;
 
 namespace Dashboard.Controllers
 {
@@ -16,8 +16,6 @@ namespace Dashboard.Controllers
         [Route("")]
         public ActionResult Index()
         {
-            var model = new TestClass();
-            model = model.GetFromDb(DbContext);
             return View();
         }
     }

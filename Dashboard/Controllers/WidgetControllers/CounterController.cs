@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
-using CSOM.STS.DataAccess;
+using CSOMLocalDataProvider;
 using Dashboard.Models.WidgetModels;
 using Dashboard.Util;
 

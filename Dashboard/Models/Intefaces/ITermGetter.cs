@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CSOM.STS.DataAccess;
+﻿using System.Linq;
+using CSOMLocalDataProvider;
 
 namespace Dashboard.Models.Intefaces
 {
